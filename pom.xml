@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>nl.mpi.tg.eg.frinex</groupId>
+    <groupId>nl.mpi.tg.eg.AdaptiveVocabularyAssessmentModule</groupId>
     <artifactId>frinex-parent</artifactId>
-    <name>Frinex Parent</name>
+    <name>AdaptiveVocabularyAssessmentModule Parent</name>
     <version>1.5-testing-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>common</module>
-        <module>ExperimentDesigner</module>
         <module>AdaptiveVocabularyAssessmentModule</module>
-        <module>gwt-cordova</module>
-        <module>registration</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -35,130 +31,6 @@
         <application.branch>pretesting</application.branch> 
         <versionCheck.allowSnapshots>true</versionCheck.allowSnapshots> 
         <versionCheck.buildType>testing</versionCheck.buildType> 
-        
-        <!--<experiment.configuration.path>${project.build.sourceDirectory}/../xml</experiment.configuration.path>-->
-        <!--<experiment.configuration.path>${project.build.sourceDirectory}/../../../../../ExperimentBuilder/src/main/xml</experiment.configuration.path>-->      
-        <!--<experiment.configuration.path>../frinex-rest-output</experiment.configuration.path>-->
-        <experiment.configuration.path>../ExperimentDesigner/src/test/resources/frinex-rest-output/</experiment.configuration.path>
-        <experiment.artifactsJsonDirectory>${project.build.sourceDirectory}/../../../../gwt-cordova/target/</experiment.artifactsJsonDirectory>
-        <experiment.webservice></experiment.webservice>   
-        <experiment.scriptSrcUrl>http://127.0.0.1:9876 http://localhost:8443 http://localhost:9876</experiment.scriptSrcUrl>   
-        <experiment.synQuizRegistrationUrl></experiment.synQuizRegistrationUrl>
-        <experiment.groupsSocketUrl>ws://localhost:8443/</experiment.groupsSocketUrl>   
-        <experiment.destinationServer>http://localhost:8443</experiment.destinationServer>   
-        <experiment.staticFilesUrl>http://localhost:8443</experiment.staticFilesUrl>   
-        <experiment.configuration.defaultLocale>en</experiment.configuration.defaultLocale>
-        <experiment.configuration.availableLocales>en,de,nl,es</experiment.configuration.availableLocales>
-        <!--<experiment.destinationName>localhost</experiment.destinationName>-->      
-        <experiment.destinationServerUrl>http://localhost:8443</experiment.destinationServerUrl>     
-        <experiment.productionCheckString>frinexproduction</experiment.productionCheckString>
-        <!--<experiment.destinationServerUrl></experiment.destinationServerUrl>-->      
-        <!--<experiment.destinationServer></experiment.destinationServer>-->
-        <!--<experiment.configuration.name>parcours01</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>kinship_example</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>multiparticipant</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>sentences_rating_task</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>french_audio</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>french_conversation</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>dobes_annotator</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>antwoordraden</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>leeservaring</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>online_emotions</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>onlinepretest</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>shortmultiparticipant01</experiment.configuration.name>-->
-        <experiment.configuration.name>alloptions</experiment.configuration.name>
-        <!--<experiment.configuration.name>lilbq4</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>three_lists</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>hrpretest</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>shawifieldkit</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>kinoath_example</experiment.configuration.name>-->
-        <!--<experiment.configuration.displayName>Shawi FieldKit</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.name>vanuatufieldkit</experiment.configuration.name>-->
-        <!--<experiment.configuration.displayName>Vanuatu FieldKit</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.name>sentveri_exp3</experiment.configuration.name>-->
-        <!--<experiment.configuration.displayName>sentveri_exp3</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.displayName>SynQuiz2</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.name>zinnen_beoordelen</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>exampleronald</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>synquiz2</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>zinnen_afmaken</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>rosselfieldkit</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>snspsem</experiment.configuration.name>-->
-        <!--<experiment.configuration.displayName>Wellsprings Samoan FieldKit</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.name>wellspringssamoan</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>nonwacq</experiment.configuration.name>-->
-        <!--<experiment.configuration.displayName>ld_screensize</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.name>ld_screensize</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>corsi</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>generic_example</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>advocas1</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>audioas2</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>joseco02</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>guineapigproject01</experiment.configuration.name>-->
-        <!--<experiment.configuration.displayName>advocas2</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.displayName>advocas1</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.displayName>playback_preference</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.name>playback_preference</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>playhouse_study</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>heoexp01</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>ppvt</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>audioas2</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>engadvocas</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>episodic_memory</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>sentencegeneration</experiment.configuration.name>-->
-        <!-- <experiment.configuration.name>with_stimulus_example</experiment.configuration.name> -->
-        <!--<experiment.configuration.name>aggressive_audio_test</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>template_example</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>mpistairs4words2</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>image_naming_noise</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>recording_triggers_timestudy</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>thijs_test</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>zinnen_lezen_v1</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>lingquest</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>conceptual_distance</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>data_erase_test</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>mskonopka</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>discat_test</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>test_experiment2</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>session1auteurstest</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>UpPerCaSeTest</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>minimal_example</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>nonion2_verb_object</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>lupyan_replication_norming</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>lupyan_replication</experiment.configuration.name>-->
-        <!--<experiment.configuration.displayName>SynQuiz</experiment.configuration.displayName>-->
-        <!--<experiment.configuration.name>userid_audio_recorder_example</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>stairs4words2losse</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>synquiz</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>hbdigitspan</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>beliefs_app</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>rosselfieldkit1</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>invitation_validation_example</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>taal_visuelepuzzels</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>ak_study</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>exemplarnormingstudy</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>mpiquestionnairehealth</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>group_example</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>very_large_example</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>hbquestionnairehealth</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>autoprediction</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>digitspanbackward</experiment.configuration.name>-->
-        <!--<experiment.configuration.name>sentenceplausibility</experiment.configuration.name>-->
-        <experiment.configuration.admin.password></experiment.configuration.admin.password>
-        <experiment.configuration.db.password></experiment.configuration.db.password>
-        <experiment.configuration.db.host>localhost:5432</experiment.configuration.db.host>
-        
-        <!--<experiment.configuration.name>kinoath</experiment.configuration.name>-->
-        <!--        <experiment.configuration.admin.password></experiment.configuration.admin.password>
-        <experiment.configuration.db.password></experiment.configuration.db.password>-->
-        <!--<experiment.configuration.name>dobes</experiment.configuration.name>-->
-        <!--<experiment.configuration.admin.password></experiment.configuration.admin.password>-->
-        <!--<experiment.configuration.db.password></experiment.configuration.db.password>-->
-        <experiment.isScalable>yes</experiment.isScalable>
-        <experiment.defaultScale>1.0</experiment.defaultScale>
-        <finalName>${experiment.configuration.name}-${project.artifactId}-${project.version}</finalName>
-        <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
-        <experiment.noCacheString>${maven.build.timestamp}</experiment.noCacheString>
     </properties>
     <build>
         <plugins>
@@ -257,17 +129,6 @@
         </pluginRepository>
     </pluginRepositories>
     <repositories>
-        <repository>
-            <id>KinOathKinshipArchiver</id>
-            <name>KinOathKinshipArchiver Repository</name>
-            <url>https://kinshipsoftware.github.io/KinOathKinshipArchiver/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>        
         <!--        <repository>
             <id>MPI</id>
             <name>MPI LAT Repository</name>
