@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>nl.mpi.tg.eg.frinex</groupId>
-        <artifactId>frinex-parent</artifactId>
+        <artifactId>AdaptiveVocabularyAssessmentModule-parent</artifactId>
         <version>1.5-testing-SNAPSHOT</version>
     </parent>
     <artifactId>adaptive-vocabulary-assessment-module</artifactId>
