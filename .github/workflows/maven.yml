@@ -1,9 +1,9 @@
-name: MVN Run Tests
+name: MVN Run Tests and Publish
 on:
   push:
-    branches-ignore:
-      - '**' # disables this job
-    # branches: [ master ]
+    #branches-ignore:
+    #  - '**' # disables this job
+    branches: [ master ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,5 +15,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: clean test
-      run: mvn clean test -B -V -Duser.timezone=CET
+    - name: clean test deploy
+      #run: mvn clean test -B -V -Duser.timezone=CET;
+      run: pwd
+            mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots
+            ls .
+            ls ../snapshots
