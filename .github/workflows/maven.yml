@@ -21,6 +21,8 @@ jobs:
       #run: mvn clean test -B -V -Duser.timezone=CET;
       run: pwd;
             mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
+            sed -i '/adaptive-vocabulary-assessment-module/{n;s/-testing-SNAPSHOT/.'$(git rev-list --count --all AdaptiveVocabularyAssessmentModule)'-stable/}' /ExperimentTemplate/AdaptiveVocabularyAssessmentModule/pom.xml
+            mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
             ls ../snapshots;
             ls ../snapshots/*;
     - name: Deploy
