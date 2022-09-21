@@ -20,9 +20,7 @@ jobs:
     - name: clean test deploy
       #run: mvn clean test -B -V -Duser.timezone=CET;
       run: pwd;
-            cd AdaptiveVocabularyAssessmentModule;
-            mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../../snapshots;
-            cd ..;
+            mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
             ls ../snapshots;
             ls ../snapshots/*;
     - name: Deploy
