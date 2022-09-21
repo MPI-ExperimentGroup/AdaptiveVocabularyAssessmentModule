@@ -3,27 +3,27 @@
   <groupId>nl.mpi.tg.eg.frinex</groupId>
   <artifactId>adaptive-vocabulary-assessment-module</artifactId>
   <versioning>
-    <lastUpdated>20220921092952</lastUpdated>
+    <lastUpdated>20220921093931</lastUpdated>
     <snapshot>
-      <timestamp>20220921.092952</timestamp>
+      <timestamp>20220921.093931</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.5-testing-20220921.092952-1</value>
-        <updated>20220921092952</updated>
+        <value>1.5-testing-20220921.093931-1</value>
+        <updated>20220921093931</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.5-testing-20220921.092952-1</value>
-        <updated>20220921092952</updated>
+        <value>1.5-testing-20220921.093931-1</value>
+        <updated>20220921093931</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>1.5-testing-20220921.092952-1</value>
-        <updated>20220921092952</updated>
+        <value>1.5-testing-20220921.093931-1</value>
+        <updated>20220921093931</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
