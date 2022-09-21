@@ -132,7 +132,7 @@
         <repository>
             <id>Frinex</id>
             <name>Frinex Repository</name>
-            <url>https://MPI-ExperimentGroup.github.io/ExperimentTemplate/</url>
+            <url>http://mpi-experimentgroup.github.io/ExperimentTemplate/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
