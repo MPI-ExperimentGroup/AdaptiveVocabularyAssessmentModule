@@ -3,16 +3,16 @@
   <groupId>nl.mpi.tg.eg.frinex</groupId>
   <artifactId>AdaptiveVocabularyAssessmentModule-parent</artifactId>
   <versioning>
-    <lastUpdated>20220921130345</lastUpdated>
+    <lastUpdated>20220921130615</lastUpdated>
     <snapshot>
-      <timestamp>20220921.130345</timestamp>
+      <timestamp>20220921.130615</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.5-stable-20220921.130345-1</value>
-        <updated>20220921130345</updated>
+        <value>1.5-stable-20220921.130615-1</value>
+        <updated>20220921130615</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
