@@ -26,11 +26,9 @@ jobs:
             mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
             git status;
             ls -l;
-            sed -i 's|<versionCheck.buildType>testing</versionCheck.buildType>|<versionCheck.buildType>stable</versionCheck.buildType>|g' pom.xml;
-            sed -i 's|-testing-SNAPSHOT|-stable-SNAPSHOT/g' ./pom.xml ./AdaptiveVocabularyAssessmentModule/pom.xml;            
+            sed -i 's|<versionCheck.buildType>testing</versionCheck.buildType>|<versionCheck.buildType>stable</versionCheck.buildType>|g' ./pom.xml;
+            sed -i 's|-testing-SNAPSHOT|-stable-SNAPSHOT|g' ./pom.xml ./*/pom.xml;           
             mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
-            ls ../snapshots;
-            ls ../snapshots/*;
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
