@@ -27,7 +27,7 @@ jobs:
             git status;
             ls -l;
             sed -i 's|<versionCheck.buildType>testing</versionCheck.buildType>|<versionCheck.buildType>stable</versionCheck.buildType>|g' pom.xml;
-            sed -i '/adaptive-vocabulary-assessment-module/{n;s/-testing/-stable/}' ./AdaptiveVocabularyAssessmentModule/pom.xml;            
+            sed -i '/adaptive-vocabulary-assessment-module/{n;s/-testing/-stable/}' .pom.xml ./AdaptiveVocabularyAssessmentModule/pom.xml;            
             mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
             ls ../snapshots;
             ls ../snapshots/*;
