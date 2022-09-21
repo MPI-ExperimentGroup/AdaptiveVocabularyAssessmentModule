@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>nl.mpi.tg.eg.frinex</groupId>
-  <artifactId>adaptive-vocabulary-assessment-module</artifactId>
+  <artifactId>AdaptiveVocabularyAssessmentModule-parent</artifactId>
   <versioning>
     <versions>
       <version>1.5-testing-SNAPSHOT</version>

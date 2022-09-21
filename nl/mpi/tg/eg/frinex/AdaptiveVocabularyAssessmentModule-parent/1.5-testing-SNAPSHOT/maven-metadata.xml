@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
   <groupId>nl.mpi.tg.eg.frinex</groupId>
-  <artifactId>adaptive-vocabulary-assessment-module</artifactId>
+  <artifactId>AdaptiveVocabularyAssessmentModule-parent</artifactId>
   <versioning>
     <lastUpdated>20220921092952</lastUpdated>
     <snapshot>
@@ -10,18 +10,7 @@
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
-        <extension>jar</extension>
-        <value>1.5-testing-20220921.092952-1</value>
-        <updated>20220921092952</updated>
-      </snapshotVersion>
-      <snapshotVersion>
         <extension>pom</extension>
-        <value>1.5-testing-20220921.092952-1</value>
-        <updated>20220921092952</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <classifier>sources</classifier>
-        <extension>jar</extension>
         <value>1.5-testing-20220921.092952-1</value>
         <updated>20220921092952</updated>
       </snapshotVersion>
