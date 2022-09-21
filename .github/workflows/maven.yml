@@ -32,7 +32,7 @@ jobs:
             sed -i 's|<versionCheck.buildType>testing</versionCheck.buildType>|<versionCheck.buildType>stable</versionCheck.buildType>|g' ./pom.xml;
             sed -i 's|-testing-SNAPSHOT|-stable-SNAPSHOT|g' ./pom.xml ./*/pom.xml;           
             mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
-            sed -i 's|<versionCheck.allowSnapshots>true</versionCheck.allowSnapshots>|<versionCheck.allowSnapshots>false</versionCheck.allowSnapshots>|g' ./pom.xml
+            sed -i 's|<versionCheck.allowSnapshots>true</versionCheck.allowSnapshots>|<versionCheck.allowSnapshots>false</versionCheck.allowSnapshots>|g' ./pom.xml;
             git rev-list --count --all AdaptiveVocabularyAssessmentModule;
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
