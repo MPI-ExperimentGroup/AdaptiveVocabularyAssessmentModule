@@ -18,14 +18,15 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: clean test deploy
-      #run: mvn clean test -B -V -Duser.timezone=CET;
+      # run: mvn clean test -B -V -Duser.timezone=CET;
+      # git rev-list --count --all .;
+      # git rev-list --count --all AdaptiveVocabularyAssessmentModule;
+      # sed -i '/adaptive-vocabulary-assessment-module/{n;s/-testing-SNAPSHOT/.'$(git rev-list --count --all AdaptiveVocabularyAssessmentModule)'-stable/}' ./AdaptiveVocabularyAssessmentModule/pom.xml;
       run: pwd;
             mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
             git status;
             ls -l;
-            git rev-list --count --all .;
-            git rev-list --count --all AdaptiveVocabularyAssessmentModule;
-            sed -i '/adaptive-vocabulary-assessment-module/{n;s/-testing-SNAPSHOT/.'$(git rev-list --count --all AdaptiveVocabularyAssessmentModule)'-stable/}' /ExperimentTemplate/AdaptiveVocabularyAssessmentModule/pom.xml;
+            sed -i '/adaptive-vocabulary-assessment-module/{n;s/-testing/-stable/}' ./AdaptiveVocabularyAssessmentModule/pom.xml;            
             mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
             ls ../snapshots;
             ls ../snapshots/*;
