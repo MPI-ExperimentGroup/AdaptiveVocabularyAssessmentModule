@@ -3,10 +3,12 @@
   <groupId>nl.mpi.tg.eg.frinex</groupId>
   <artifactId>adaptive-vocabulary-assessment-module</artifactId>
   <versioning>
+    <release>1.5.275-stable</release>
     <versions>
       <version>1.5-testing-SNAPSHOT</version>
       <version>1.5-stable-SNAPSHOT</version>
+      <version>1.5.275-stable</version>
     </versions>
-    <lastUpdated>20220921130615</lastUpdated>
+    <lastUpdated>20220921131248</lastUpdated>
   </versioning>
 </metadata>
