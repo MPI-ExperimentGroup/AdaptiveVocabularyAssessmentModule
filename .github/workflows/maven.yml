@@ -1,4 +1,4 @@
-name: MVN Run Tests and Publish
+name: MVN Run Tests and Publish Artifacts
 on:
   push:
     #branches-ignore:
@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -18,6 +20,14 @@ jobs:
     - name: clean test deploy
       #run: mvn clean test -B -V -Duser.timezone=CET;
       run: pwd;
-            mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
-            ls .;
+            cd AdaptiveVocabularyAssessmentModule;
+            mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../../snapshots;
+            cd ..;
             ls ../snapshots;
+            ls ../snapshots/*;
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ../snapshots
+        keep_files: true
