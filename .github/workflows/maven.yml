@@ -21,10 +21,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: clean test deploy
-      # run: mvn clean test -B -V -Duser.timezone=CET;
-      # git rev-list --count --all .;
-      # git rev-list --count --all AdaptiveVocabularyAssessmentModule;
-      # sed -i '/adaptive-vocabulary-assessment-module/{n;s/-testing-SNAPSHOT/.'$(git rev-list --count --all AdaptiveVocabularyAssessmentModule)'-stable/}' ./AdaptiveVocabularyAssessmentModule/pom.xml;
       run: pwd;
             mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
             git status;
@@ -35,6 +31,7 @@ jobs:
             sed -i 's|<versionCheck.allowSnapshots>true</versionCheck.allowSnapshots>|<versionCheck.allowSnapshots>false</versionCheck.allowSnapshots>|g' ./pom.xml;
             git rev-list --count --all AdaptiveVocabularyAssessmentModule;
             sed -i '/adaptive-vocabulary-assessment-module/{n;s/-stable-SNAPSHOT/.'$(git rev-list --count --all AdaptiveVocabularyAssessmentModule)'-stable/}' ./AdaptiveVocabularyAssessmentModule/pom.xml;
+            mvn clean test deploy -DaltDeploymentRepository=snapshot-repo::default::file:../snapshots;
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
