@@ -17,6 +17,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: Install sed
+      run: sudo apt-get install -y sed
     - name: clean test deploy
       #run: mvn clean test -B -V -Duser.timezone=CET;
       run: pwd;
