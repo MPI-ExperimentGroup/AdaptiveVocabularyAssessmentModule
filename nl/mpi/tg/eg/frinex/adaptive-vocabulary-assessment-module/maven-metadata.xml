@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>nl.mpi.tg.eg.frinex</groupId>
+  <artifactId>adaptive-vocabulary-assessment-module</artifactId>
+  <versioning>
+    <versions>
+      <version>1.5-testing-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20220921092707</lastUpdated>
+  </versioning>
+</metadata>
